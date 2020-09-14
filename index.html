@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mars Weather App</title>
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/index.js" defer></script>
+  </head>
+  <body>
+    <main class="mars-current-weather">
+      <h1 class="main-title">Latest weather at Elysium Plantitia</h1>
+
+      <div class="date">
+        <!-- section-title--date is a modifier of class "date" -->
+        <h2 class="section-title section-title--date">Sol 377</h2>
+        <p class="date__day">September 18</p>
+        <!-- Good idea to choose a month with longer name to test if it will break the layout -->
+      </div>
+
+      <div class="temp">
+        <h2 class="section-title"></h2>
+
+        <p class="reading">High: -20°C</p>
+        <p class="reading">low: -198°C</p>
+      </div>
+
+      <div class="wind">
+        <h2 class="section-title">Wind</h2>
+        <p class="reading">75 kph</p>
+
+        <div class="wind__direction">
+          <p class="sr-only">45deg</p>
+          <!-- sr == screen-reader only -->
+          <div class="wind__arrow"></div>
+        </div>
+
+        <div class="info">
+          <p>
+            InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium
+            Plantitia, a flat, smooth plain near Mars' equator.
+          </p>
+          <p>
+            This is only a part of InSight's mission.
+            <a href="http://mars.nasa.gov/insight/mission/overview/">Click here</a> to find out more.
+          </p>
+        </div>
+
+        <div class="unit">
+          <label for="cel">°C</label>
+          <input type="radio" id="cel" name="unit" checked />
+          <!-- ToDO: When unit_toggle is clicked checkbox needs to change -->
+          <button class="unit__toggle"></button>
+
+          <label for="fah">°F</label>
+          <input type="radio" id="fah" name="unit" checked />
+        </div>
+      </div>
+    </main>
+
+    <div class="previous-weather">
+      <label for="weather-toggle" class="show-previous-weather-label"
+        >&#8593; <span class="sr-only">Show previous weather</span>
+      </label>
+
+      <input type="checkbox" id="weather-toggle" class="show-previous-weather-toggle" />
+
+      <h2 class="main-title">Previous 7 days</h2>
+      <div class="previous-days">
+        <div class="previous-day">
+          <h3 class="previous-day__sol">Sol 371</h3>
+          <p class="previous-day__date">September 31st</p>
+          <p class="previous-day__temp">High: -20°C</p>
+          <p class="previous-day__temp">low: -198°C</p>
+          <button class="previous-day__more-info">more info</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
