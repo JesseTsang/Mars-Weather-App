@@ -27,7 +27,7 @@
       </div>
 
       <div class="temp">
-        <h2 class="section-title"></h2>
+        <h2 class="section-title">Temperature</h2>
 
         <p class="reading">High: -20°C</p>
         <p class="reading">low: -198°C</p>
@@ -42,32 +42,31 @@
           <!-- sr == screen-reader only -->
           <div class="wind__arrow"></div>
         </div>
+      </div>
+      <div class="info">
+        <p>
+          InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium
+          Plantitia, a flat, smooth plain near Mars' equator.
+        </p>
+        <p>
+          This is only a part of InSight's mission.
+          <a href="http://mars.nasa.gov/insight/mission/overview/">Click here</a> to find out more.
+        </p>
+      </div>
 
-        <div class="info">
-          <p>
-            InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysium
-            Plantitia, a flat, smooth plain near Mars' equator.
-          </p>
-          <p>
-            This is only a part of InSight's mission.
-            <a href="http://mars.nasa.gov/insight/mission/overview/">Click here</a> to find out more.
-          </p>
-        </div>
+      <div class="unit">
+        <label for="cel">°C</label>
+        <input type="radio" id="cel" name="unit" checked />
+        <!-- ToDO: When unit_toggle is clicked checkbox needs to change -->
+        <button class="unit__toggle"></button>
 
-        <div class="unit">
-          <label for="cel">°C</label>
-          <input type="radio" id="cel" name="unit" checked />
-          <!-- ToDO: When unit_toggle is clicked checkbox needs to change -->
-          <button class="unit__toggle"></button>
-
-          <label for="fah">°F</label>
-          <input type="radio" id="fah" name="unit" checked />
-        </div>
+        <label for="fah">°F</label>
+        <input type="radio" id="fah" name="unit" checked />
       </div>
     </main>
 
     <div class="previous-weather">
-      <label for="weather-toggle" class="show-previous-weather-label"
+      <label for="weather-toggle" class="show-previous-weather-label">
         >&#8593; <span class="sr-only">Show previous weather</span>
       </label>
 
