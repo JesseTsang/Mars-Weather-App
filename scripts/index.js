@@ -99,31 +99,7 @@ function displaySolDetails(sols) {
   windDirectionDegreesElement.style.setProperty("--direction", `${sols.windDirectionDegrees}deg`);
 }
 
-// Helper function to convert a Date object to a simple "September 31st" format.
-function displayDate(date) {
-  return date.toLocaleDateString(undefined, { day: "numeric", month: "long" });
-}
-
-function displayTemperature(temperature) {
-  let returnTemperature = temperature;
-
-  if (!isMetric()) {
-    returnTemperature = (temperature - 32) * (5 / 9);
-  }
-
-  return Math.round(returnTemperature);
-}
-
-function displaySpeed(speed) {
-  let returnSpeed = speed;
-
-  if (!isMetric()) {
-    returnSpeed = speed / 1.609;
-  }
-
-  return Math.round(returnSpeed);
-}
-
+// This function generates the "previous sol" section using HTML template 'data-previous-sols-template'
 function displayPreviousSols(sols) {
   previousSolContainer.innerText = "";
 
@@ -158,6 +134,30 @@ function updateUnits() {
   temperatureUnit.forEach((unit) => {
     unit.innerText = isMetric() ? "C" : "F";
   });
+}
+
+function displayDate(date) {
+  return date.toLocaleDateString(undefined, { day: "numeric", month: "long" });
+}
+
+function displayTemperature(temperature) {
+  let returnTemperature = temperature;
+
+  if (!isMetric()) {
+    returnTemperature = (temperature - 32) * (5 / 9);
+  }
+
+  return Math.round(returnTemperature);
+}
+
+function displaySpeed(speed) {
+  let returnSpeed = speed;
+
+  if (!isMetric()) {
+    returnSpeed = speed / 1.609;
+  }
+
+  return Math.round(returnSpeed);
 }
 
 function isMetric() {
