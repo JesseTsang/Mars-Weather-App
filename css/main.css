@@ -13,7 +13,7 @@
   --fs-h1: 1.5rem;
   --fs-h2: 2.25rem;
   --fs-body: 1rem;
-  --fs-xl: 4.5rem;
+  --fs-xl: 4rem;
   --clr-light: #fff;
   --clr-gray: #989898;
   --clr-dark: #444;
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .date__day {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h1);
   margin: 0;
   color: var(--clr-gray);
   font-weight: var(--fw-light);
