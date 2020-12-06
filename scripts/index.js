@@ -1,4 +1,4 @@
-const API_KEY = "DEMO_KEY";
+const API_KEY = "kloPUZYcMjBIQ2909TsC75vOUu7ffLLqemTW2Vad";
 const API_URL = `https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0`;
 
 const previousWeatherToggle = document.querySelector(".show-previous-weather");
@@ -78,11 +78,11 @@ async function getNASAWeather() {
   return Object.entries(solData).map(([sol, data_2]) => {
     return {
       sol: sol,
-      maxTemp: data_2.AT.mx,
-      minTemp: data_2.AT.mn,
-      windSpeed: data_2.HWS.av,
-      windDirectionDegrees: data_2.WD.most_common.compass_degrees,
-      windDirectionCardinal: data_2.WD.most_common.compass_point,
+      maxTemp: data_2.AT?.mx,
+      minTemp: data_2.AT?.mn,
+      windSpeed: data_2.HWS?.av,
+      windDirectionDegrees: data_2.WD.most_common?.compass_degrees,
+      windDirectionCardinal: data_2.WD.most_common?.compass_point,
       date: new Date(data_2.First_UTC),
     };
   });
