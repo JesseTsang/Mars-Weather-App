@@ -1,0 +1,22 @@
+{
+  "name": "mars-weather-app",
+  "version": "1.0.0",
+  "description": "Live Mars weather using data from NASA's API, built with HTML, CSS (SASS), and JavaScript.",
+  "main": "index.html",
+  "scripts": {
+    "start-test": "node scripts/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesseTsang/Mars-Weather-App.git"
+  },
+  "author": "Jesse Tsang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesseTsang/Mars-Weather-App/issues"
+  },
+  "homepage": "https://github.com/JesseTsang/Mars-Weather-App#readme",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
